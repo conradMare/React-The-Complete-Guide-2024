@@ -15,7 +15,7 @@ console.log(index);
 // const editedHobbies = hobbies.map((item) => item + "!");
 // console.log(editedHobbies);
 
-// Map can also take objects as input
+// Map can also take objects
 const updatedHobbies = hobbies.map((item) => ({
     text: item
 }));
