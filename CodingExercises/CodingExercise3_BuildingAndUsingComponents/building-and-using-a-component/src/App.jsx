@@ -4,6 +4,12 @@ import React from 'react';
 // IMPORTANT: Add "export" in front of your component - otherwise the automated tests won't work
 // ...
 
+export function MainGoal() {
+  return (
+    <p>My main goal: To learn React in-depth from the ground up</p>
+  )
+}
+
 // DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
 // Except for outputting your custom component
 
@@ -33,6 +39,7 @@ function App() {
       </p>
       {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
       {/* OUTPUT YOUR COMPONENT HERE */}
+      <MainGoal />
     </div>
   );
 }
