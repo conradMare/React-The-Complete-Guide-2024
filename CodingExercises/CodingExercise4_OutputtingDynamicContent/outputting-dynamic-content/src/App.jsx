@@ -8,12 +8,17 @@ export const userData = {
 
 // Edit the User component code to output the userData data
 export function User() {
+
+  const fName = userData.firstName;
+  const lName = userData.lastName;
+  const title = userData.title;
+
   return (
     <div id="user" data-testid="user">
       <h2>
-        TODO: FIRST NAME LAST NAME
+        {fName} {lName}
       </h2>
-      <p>TODO: TITLE</p>
+      <p>{title}</p>
     </div>
   );
 }
