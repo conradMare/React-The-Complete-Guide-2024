@@ -18,7 +18,7 @@ function App() {
       </p>
 
       <p id="actions">
-        <button>Create User</button>
+        <button onClick={() => handleCreateUser('name')}>Create User</button>
       </p>
     </div>
   );
