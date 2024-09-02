@@ -7,7 +7,7 @@
 import React from 'react';
 
 import Todo from './Todo';
-import './styles.css';
+import './index.css';
 
 export const DUMMY_TODOS = [
   'Learn React',
