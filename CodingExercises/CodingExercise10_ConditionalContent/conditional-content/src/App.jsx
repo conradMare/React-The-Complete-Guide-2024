@@ -2,7 +2,7 @@
 // Therefore, your task is to conditionally show a warning box once a user has clicked a specific button.
 // Inside that warning dialog, another button allows users to dismiss the warning (i.e., remove the warning box from the screen).
 
-import React from 'react';
+import { useState } from "react";
 
 // IMPORTANT:
 // In this Udemy environment, you CAN'T import & use useState like this:
@@ -13,14 +13,33 @@ import React from 'react';
 
 // don't change the Component name "App"
 export default function App() {
-  return (
-    <div>
+
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  function deleteHandler() {
+    setIsDeleting(true);
+  }
+
+  function proceedHandler() {
+    setIsDeleting(false);
+  }
+
+  let warning;
+
+  if (isDeleting) {
+    warning = (
       <div data-testid="alert" id="alert">
         <h2>Are you sure?</h2>
         <p>These changes can not be reverted!</p>
-        <button>Proceed</button>
+        <button onClick={proceedHandler}>Proceed</button>
       </div>
-      <button>Delete</button>
+    );
+  }
+
+  return (
+    <div>
+      {warning}
+      <button onClick={deleteHandler}>Delete</button>
     </div>
   );
 }
