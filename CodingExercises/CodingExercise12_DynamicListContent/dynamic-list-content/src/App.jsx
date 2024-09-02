@@ -4,9 +4,11 @@
 // To be more precise: In the App component, you should transform the DUMMY_TODOS array that's provided to you (which must not be changed!)
 // to a list of JSX elements (<Todo> elements to be precise). Every Todo component item must receive and output the todo text via a prop called text.
 
-import Todo from './Todo'
+import React from 'react';
 
-// don't remove the export keyword here!
+import Todo from './Todo';
+import './styles.css';
+
 export const DUMMY_TODOS = [
   'Learn React',
   'Practice React',
@@ -15,5 +17,9 @@ export const DUMMY_TODOS = [
 
 // don't change the Component name "App"
 export default function App() {
-
+  return (
+    <ul>
+      {DUMMY_TODOS.map(todo => <Todo text={todo} />)}
+    </ul>
+  );
 }
