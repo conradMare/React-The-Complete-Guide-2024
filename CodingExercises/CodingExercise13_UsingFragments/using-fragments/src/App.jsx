@@ -13,7 +13,12 @@ For example, this code would be wrong:
 
 
 function Summary({ text }) {
-  return null;
+  return (
+    <>
+      <h1>Summary</h1>
+      <p>{text}</p>
+    </>
+  );
 }
 
 function App() {
