@@ -1,5 +1,4 @@
-export default function Tabs({ children, buttons, ButtonsContainer }) {
-    // const ButtonsContainer = buttonsContainer;
+export default function Tabs({ children, buttons, ButtonsContainer = "menu" }) {
     return (
         <>
             <ButtonsContainer>
@@ -7,5 +6,5 @@ export default function Tabs({ children, buttons, ButtonsContainer }) {
             </ButtonsContainer>
             {children}
         </>
-    )
+    );
 }
