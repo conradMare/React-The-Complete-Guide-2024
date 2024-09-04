@@ -2,9 +2,7 @@ import CoreConcepts from './components/CoreConcepts.jsx';
 import Header from './components/Header/Header.jsx';
 import Examples from './components/Examples.jsx';
 
-function App() {
-
-
+export default function App() {
   return (
     <>
       <Header />
@@ -15,5 +13,3 @@ function App() {
     </>
   );
 }
-
-export default App;
