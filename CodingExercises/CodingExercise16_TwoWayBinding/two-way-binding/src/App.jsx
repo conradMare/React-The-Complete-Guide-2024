@@ -2,18 +2,20 @@
 
 // In addition, you should pass the collected values via the appropriate props to the already existing Review component.
 
-import { useState } from 'react';
-import Review from './components/Review';
+import { useState } from "react";
+import Review from "./components/Review";
 
-export default function App() {
-  const [studentName, setStudentName] = useState("");
+// don't change the Component name "App"
+function App() {
+
+  const [student, setStudent] = useState("");
   const [feedback, setFeedback] = useState("");
 
-  function handleChangeName(event) {
-    setStudentName(event.target.value);
+  function handleStudentChange(event) {
+    setStudent(event.target.value);
   }
 
-  function handleChangeFeedback(event) {
+  function handleFeedbackChange(event) {
     setFeedback(event.target.value);
   }
 
@@ -23,17 +25,17 @@ export default function App() {
         <h2>Please share some feedback</h2>
         <p>
           <label>Your Feedback</label>
-          <textarea onChange={handleChangeFeedback} value={feedback} />
+          <textarea onChange={handleFeedbackChange} />
         </p>
         <p>
           <label>Your Name</label>
-          <input type="text" onChange={handleChangeName} value={studentName} />
+          <input type="text" onChange={handleStudentChange} value={student} />
         </p>
       </section>
       <section id="draft">
         <h2>Your feedback</h2>
 
-        <Review feedback={feedback} student={studentName} />
+        <Review feedback={feedback} student={student} />
 
         <p>
           <button>Save</button>
@@ -42,3 +44,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
