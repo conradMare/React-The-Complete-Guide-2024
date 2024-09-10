@@ -13,8 +13,8 @@ export default function Player({ initialName, symbol, isActive, onChangeName }) 
         }
     }
 
-    function handleChange(event) {
-        setPlayerName(event.target.value);
+    function handleChange(e) {
+        setPlayerName(e.target.value);
     }
 
     let editablePlayerName = <span className="player-name">{playerName}</span>;
@@ -22,7 +22,6 @@ export default function Player({ initialName, symbol, isActive, onChangeName }) 
     if (isEditing) {
         editablePlayerName = <input type="text" required value={playerName} onChange={handleChange} />;
     }
-
 
     return (
         <li className={isActive ? 'active' : undefined}>
