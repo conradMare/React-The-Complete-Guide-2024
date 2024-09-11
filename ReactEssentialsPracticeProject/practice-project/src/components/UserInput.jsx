@@ -1,4 +1,4 @@
-export default function UserInput({ onChange, userInput }) {
+export default function UserInput({ onChangeInput, userInput }) {
     return (
         <section id="user-input">
             <div className="input-group">
@@ -9,7 +9,7 @@ export default function UserInput({ onChange, userInput }) {
                         required
                         value={userInput.initialInvestment}
                         onChange={(event) =>
-                            onChange('initialInvestment', event.target.value)
+                            onChangeInput('initialInvestment', event.target.value)
                         }
                     />
                 </p>
@@ -20,7 +20,7 @@ export default function UserInput({ onChange, userInput }) {
                         required
                         value={userInput.annualInvestment}
                         onChange={(event) =>
-                            onChange('annualInvestment', event.target.value)
+                            onChangeInput('annualInvestment', event.target.value)
                         }
                     />
                 </p>
@@ -33,7 +33,7 @@ export default function UserInput({ onChange, userInput }) {
                         required
                         value={userInput.expectedReturn}
                         onChange={(event) =>
-                            onChange('expectedReturn', event.target.value)
+                            onChangeInput('expectedReturn', event.target.value)
                         }
                     />
                 </p>
@@ -43,7 +43,8 @@ export default function UserInput({ onChange, userInput }) {
                         type="number"
                         required
                         value={userInput.duration}
-                        onChange={(event) => onChange('duration', event.target.value)}
+                        onChange={(event) =>
+                            onChangeInput('duration', event.target.value)}
                     />
                 </p>
             </div>
