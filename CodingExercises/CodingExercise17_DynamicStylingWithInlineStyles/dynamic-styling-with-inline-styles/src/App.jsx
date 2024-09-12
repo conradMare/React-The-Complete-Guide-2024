@@ -5,16 +5,28 @@
 
 // Initially, when no button has been clicked yet, the color should be set to "white".
 
+import { useState } from "react";
+
 function App() {
+  const [choice, setChoice] = useState(undefined);
+
+  let textColor = 'white';
+
+  if (choice === 'yes') {
+    textColor = 'green';
+  } else if (choice === 'no') {
+    textColor = 'red';
+  }
+
   return (
     <div id="app">
-      <h1>CSS is great!</h1>
+      <h1 style={{ color: textColor }}>CSS is great!</h1>
       <menu>
         <li>
-          <button>Yes</button>
+          <button onClick={() => setChoice('yes')}>Yes</button>
         </li>
         <li>
-          <button>No</button>
+          <button onClick={() => setChoice('no')}>No</button>
         </li>
       </menu>
     </div>
