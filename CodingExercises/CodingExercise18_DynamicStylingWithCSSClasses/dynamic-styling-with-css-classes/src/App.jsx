@@ -6,16 +6,29 @@
 
 // If not button was clicked yet, no CSS class should be added to the h1 element.
 
+import { useState } from "react";
+
 function App() {
+
+  const [choice, setChoice] = useState(null);
+
+  let cssClass;
+
+  if (choice === 'Yes') {
+    cssClass = 'highlight-green';
+  } else if (choice === 'No') {
+    cssClass = 'highlight-red';
+  }
+
   return (
     <div id="app">
-      <h1>CSS is great!</h1>
+      <h1 className={cssClass}>CSS is great!</h1>
       <menu>
         <li>
-          <button>Yes</button>
+          <button onClick={() => setChoice('Yes')}>Yes</button>
         </li>
         <li>
-          <button>No</button>
+          <button onClick={() => setChoice('No')}>No</button>
         </li>
       </menu>
     </div>
