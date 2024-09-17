@@ -5,14 +5,21 @@
 
 // Make sure that the button toggles between these two styles (color: white <=> color: red).
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // don't change the Component name "App"
 export default function App() {
+
+  const [changed, setChanged] = useState(false);
+
+  function handleClick() {
+    setChanged(isChanged => !isChanged);
+  }
+
   return (
     <div>
-      <p>Style me!</p>
-      <button>Toggle style</button>
+      <p style={{ color: changed ? 'red' : 'white' }}>Style me!</p>
+      <button onClick={handleClick}>Toggle style</button>
     </div>
   );
 }
