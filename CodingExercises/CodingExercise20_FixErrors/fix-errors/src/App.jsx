@@ -13,10 +13,10 @@ export default function App() {
   };
 
   return (
-    <Div>
-      <h2>You're logged in!</h2>
+    <div>
+      <h2>You are logged in!</h2>
       <p>Welcome to your user profile!</p>
-      <button onclick={clickHandler}>Click me!</button>
-    </Div>
+      <button onClick={clickHandler}>Click me!</button>
+    </div>
   );
 }
