@@ -11,13 +11,21 @@
 // You should use React's "ref" feature to get hold of the <input type="file"> element and execute that
 // click() method on it whenever the <button> is clicked.
 
+import { useRef } from 'react';
+
 function App() {
+  const filePicker = useRef();
+
+  function handleStartPickImage() {
+    filePicker.current.click();
+  }
+
   return (
     <div id="app">
       <p>Please select an image</p>
       <p>
-        <input data-testid="file-picker" type="file" accept="image/*" />
-        <button>Pick Image</button>
+        <input data-testid="file-picker" type="file" accept="image/*" ref={filePicker} />
+        <button onClick={handleStartPickImage}>Pick Image</button>
       </p>
     </div>
   );
