@@ -16,7 +16,7 @@
 
 // When a timer expires, the same function that's triggered when the "Stop" button is pressed should be executed.
 
-import React from 'react';
+import { useState } from 'react';
 
 import Workout from './components/Workout';
 
@@ -39,7 +39,7 @@ const workouts = [
 ];
 
 function App() {
-  const [completedWorkouts, setCompletedWorkouts] = React.useState([]);
+  const [completedWorkouts, setCompletedWorkouts] = useState([]);
 
   function handleWorkoutComplete(workoutTitle) {
     setCompletedWorkouts((prevCompletedWorkouts) => [
