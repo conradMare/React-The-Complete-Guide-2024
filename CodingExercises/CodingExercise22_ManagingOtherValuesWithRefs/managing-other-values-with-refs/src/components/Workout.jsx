@@ -1,10 +1,14 @@
+import { useRef } from 'react';
+
 export default function Workout({ title, description, time, onComplete }) {
+    const timer = useRef();
+
     function handleStartWorkout() {
-        // Todo: Start timer
+        timer.current = setTimeout(handleStopWorkout, time);
     }
 
     function handleStopWorkout() {
-        // Todo: Stop timer
+        clearTimeout(timer.current);
         onComplete();
     }
 
