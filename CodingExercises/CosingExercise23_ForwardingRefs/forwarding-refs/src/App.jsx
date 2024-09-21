@@ -21,6 +21,7 @@
 
 // The read values must then be stored in the already-existing userData object.
 
+import { useRef } from "react";
 import Input from "./components/Input";
 
 export const userData = {
@@ -29,17 +30,23 @@ export const userData = {
 };
 
 export function App() {
+  const name = useRef();
+  const email = useRef();
+
   function handleSaveData() {
-    userData.name = 'TODO: Set to actual entered value';
-    userData.email = 'TODO: Set to actual entered value';
+    const enteredName = name.current.value;
+    const enteredEmail = email.current.value;
+
+    userData.name = enteredName;
+    userData.email = enteredEmail;
 
     console.log(userData);
   }
 
   return (
     <div id="app">
-      <Input type="text" label="Your Name" />
-      <Input type="email" label="Your E-Mail" />
+      <Input type="text" label="Your Name" ref={name} />
+      <Input type="email" label="Your E-Mail" ref={email} />
       <p id="actions">
         <button onClick={handleSaveData}>Save Data</button>
       </p>
