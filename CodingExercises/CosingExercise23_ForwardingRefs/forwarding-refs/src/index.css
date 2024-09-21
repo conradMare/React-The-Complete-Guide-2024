@@ -68,8 +68,27 @@ body {
   background: none;
   color: #e5d9f1;
   cursor: pointer;
+  animation: pulse 1s infinite;
 }
 
 #actions button:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes pulse {
+  100% {
+    background-color: #a279cb;
+  }
+  75% {
+    background-color: #631bba;
+  }
+  50% {
+    background-color: #410d80;
+  }
+  25% {
+    background-color: #4b2383;
+  }
+  0% {
+    background-color: #3a1967;
+  }
 }
