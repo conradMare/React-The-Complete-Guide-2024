@@ -8,18 +8,21 @@
 // Because that exposed clear() function should call the form's built-in reset() method
 // (the JS form object, which is the underlying object of the <form> element, has a reset() method that does exactly what its name implies).
 
-import Form from "./components/Form";
+import { useRef } from 'react';
 
-// Don't change the name of the 'App' 
-// function and keep it a named export
+import Form from './components/Form';
 
 export default function App() {
-  function handleRestart() { }
+  const form = useRef();
+
+  function handleRestart() {
+    form.current.clear();
+  }
 
   return (
     <div id="app">
       <button onClick={handleRestart}>Restart</button>
-      <Form />
+      <Form ref={form} />
     </div>
   );
 }
