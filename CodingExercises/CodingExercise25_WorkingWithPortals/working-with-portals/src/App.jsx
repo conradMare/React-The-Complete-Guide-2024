@@ -10,20 +10,24 @@
 
 // After 3 seconds (set via setTimeout), the Toast component should be removed from the page again.
 
-import Toast from "./components/Toast";
+import { useState } from 'react';
+
+import Toast from './components/Toast';
 
 function App() {
+  const [toastVisible, setToastVisible] = useState(false);
+
   function handleEnrol() {
-    // Todo: Show toast
+    setToastVisible(true);
 
     setTimeout(() => {
-      // Todo: hide toast
+      setToastVisible(false);
     }, 3000);
   }
 
   return (
     <div id="app">
-      {/* Todo: Render <Toast /> component (conditionally) here */}
+      {toastVisible && <Toast message="Enrolled successfully!" />}
       <article>
         <h2>React Course</h2>
         <p>
