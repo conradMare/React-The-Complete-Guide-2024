@@ -20,7 +20,7 @@ export default function TimerChallenge({ title, targetTime }) {
 
     function handleStart() {
         timer.current = setInterval(() => {
-            setTimeRemaining(prevTimeReaming => prevTimeReaming - 10);
+            setTimeRemaining(prevTimeRemaining => prevTimeRemaining - 10);
         }, 10);
     }
 
