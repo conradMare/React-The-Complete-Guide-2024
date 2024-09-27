@@ -6,6 +6,7 @@ import NoProjectSelected from "./components/NoProjectSelected";
 
 function App() {
 
+  const projectId = Math.random();
   const [projectsState, setProjectsState] = useState({
     selectedProjectId: undefined,
     projects: []
@@ -24,17 +25,16 @@ function App() {
     setProjectsState(prevState => {
       const newProject = {
         ...projectData,
-        id: Math.random()
+        id: projectId,
       };
 
       return {
         ...prevState,
+        selectedProjectId: undefined,
         projects: [...prevState.projects, newProject],
       }
     })
   }
-
-  console.log(projectsState);
 
   let content;
 
@@ -46,7 +46,9 @@ function App() {
 
   return (
     <main className="h-screen my-8 flex gap-8">
-      <ProjectsSidebar onStartAddProject={handleStartAddProject} />
+      <ProjectsSidebar
+        onStartAddProject={handleStartAddProject}
+        projects={projectsState.projects} />
       {content}
     </main>
   );
