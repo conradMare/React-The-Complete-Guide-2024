@@ -40,5 +40,5 @@ export default function SelectedProject({
                 tasks={tasks}
             />
         </div>
-    )
+    );
 }

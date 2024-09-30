@@ -24,6 +24,6 @@ export default function Tasks({ tasks, onAdd, onDelete }) {
                     ))}
                 </ul>
             )}
-        </section >
+        </section>
     );
 }
