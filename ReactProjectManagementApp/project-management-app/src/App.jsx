@@ -7,7 +7,6 @@ import SelectedProject from "./components/SelectedProject";
 
 function App() {
 
-  const projectId = Math.random();
   const [projectsState, setProjectsState] = useState({
     selectedProjectId: undefined,
     projects: [],
