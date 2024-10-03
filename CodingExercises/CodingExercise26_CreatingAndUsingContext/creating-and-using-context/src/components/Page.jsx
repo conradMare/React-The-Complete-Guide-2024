@@ -9,7 +9,6 @@ export default function Page() {
     return (
         <div id="app" className={themeCtx.theme}>
             <Header />
-
             <article>
                 <h2>React Course</h2>
                 <p>
