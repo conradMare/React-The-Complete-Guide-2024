@@ -1,8 +1,13 @@
-import Header from "./Header";
+import { useContext } from 'react';
+
+import Header from './Header.jsx';
+import { ThemeContext } from './ThemeContextProvider.jsx';
 
 export default function Page() {
+    const themeCtx = useContext(ThemeContext);
+
     return (
-        <div id="app">
+        <div id="app" className={themeCtx.theme}>
             <Header />
 
             <article>

@@ -15,10 +15,15 @@
 // the Page component will need access to apply a the CSS class 'light' (for theme === 'light')
 // or the class 'dark' (theme === 'dark') to the <div id="app">.
 
-import Page from "./components/Page";
+import Page from './components/Page';
+import ThemeContextProvider from './components/ThemeContextProvider';
 
 function App() {
-  return <Page />;
+  return (
+    <ThemeContextProvider>
+      <Page />
+    </ThemeContextProvider>
+  );
 }
 
 export default App;
