@@ -76,7 +76,7 @@ export default function CartContextProvider({ children }) {
     function handleAddItemToCart(id) {
         shoppingCartDispatch({
             type: 'ADD_ITEM',
-            payload: id
+            payload: id,
         });
     }
 
@@ -87,7 +87,7 @@ export default function CartContextProvider({ children }) {
                 productId,
                 amount,
             }
-        })
+        });
     }
 
     const ctxValue = {
