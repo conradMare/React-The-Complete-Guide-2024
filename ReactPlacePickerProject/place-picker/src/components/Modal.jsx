@@ -10,9 +10,7 @@ function Modal({ open, children }) {
         } else {
             dialog.current.close();
         }
-    }, []);
-
-    dialog.current.showModal();
+    }, [open]);
 
     return createPortal(
         <dialog className="modal" ref={dialog}>
