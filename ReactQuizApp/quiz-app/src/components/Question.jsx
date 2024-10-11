@@ -4,14 +4,10 @@ import QuestionTimer from "./QuestionTimer.jsx";
 import Answers from "./Answers.jsx";
 import QUESTIONS from "../questions.js";
 
-export default function Question({
-    index,
-    onSelectAnswer,
-    onSkipAnswer,
-}) {
+export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
     const [answer, setAnswer] = useState({
         selectedAnswer: '',
-        isCorrect: null
+        isCorrect: null,
     });
 
     let timer = 10000;
@@ -27,14 +23,14 @@ export default function Question({
     function handleSelectAnswer(answer) {
         setAnswer({
             selectedAnswer: answer,
-            isCorrect: null
-        })
+            isCorrect: null,
+        });
 
         setTimeout(() => {
             setAnswer({
                 selectedAnswer: answer,
-                isCorrect: QUESTIONS[index].answers[0] === answer
-            })
+                isCorrect: QUESTIONS[index].answers[0] === answer,
+            });
 
             setTimeout(() => {
                 onSelectAnswer(answer);

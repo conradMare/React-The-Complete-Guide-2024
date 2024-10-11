@@ -23,11 +23,12 @@ export default function QuestionTimer({ timeout, onTimeout, mode }) {
         };
     }, []);
 
-    return (<progress
-        id="question-time"
-        max={timeout}
-        value={remainingTime}
-        className={mode}
-    />
+    return (
+        <progress
+            id="question-time"
+            max={timeout}
+            value={remainingTime}
+            className={mode}
+        />
     );
 }
