@@ -1,6 +1,8 @@
-import { log } from '../../log.js';
+import { memo } from "react";
 
-export default function IconButton({ children, icon, ...props }) {
+import { log } from "../../log.js";
+
+const IconButton = memo(function IconButton({ children, icon, ...props }) {
     log('<IconButton /> rendered', 2);
 
     const Icon = icon;
@@ -10,4 +12,6 @@ export default function IconButton({ children, icon, ...props }) {
             <span className="button-text">{children}</span>
         </button>
     );
-}
+});
+
+export default IconButton;
