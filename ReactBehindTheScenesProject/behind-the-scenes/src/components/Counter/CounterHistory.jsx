@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { log } from "../../log.js";
+import { log } from '../../log.js';
 
 function HistoryItem({ count }) {
     log('<HistoryItem /> rendered', 3);
@@ -24,7 +24,7 @@ export default function CounterHistory({ history }) {
     return (
         <ol>
             {history.map((count) => (
-                <HistoryItem key={count.id} count={count} />
+                <HistoryItem key={count.id} count={count.value} />
             ))}
         </ol>
     );
