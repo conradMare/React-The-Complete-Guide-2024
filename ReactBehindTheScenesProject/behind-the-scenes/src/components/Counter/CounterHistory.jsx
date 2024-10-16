@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { log } from '../../log.js';
+import { log } from "../../log.js";
 
 function HistoryItem({ count }) {
     log('<HistoryItem /> rendered', 3);
