@@ -1,5 +1,5 @@
-import { log } from '../log.js';
-import logoImg from '../assets/logo.png';
+import { log } from "../log.js";
+import logoImg from "../assets/logo.png";
 
 export default function Header() {
     log('<Header /> rendered', 1);

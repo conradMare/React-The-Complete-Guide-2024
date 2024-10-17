@@ -1,4 +1,4 @@
-import { log } from '../../log.js';
+import { log } from "../../log.js";
 
 export default function CounterOutput({ value }) {
     log('<CounterOutput /> rendered', 2);
