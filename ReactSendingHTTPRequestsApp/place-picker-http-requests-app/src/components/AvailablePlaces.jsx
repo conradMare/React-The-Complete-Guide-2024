@@ -2,11 +2,15 @@ import { useState } from 'react';
 
 import Places from './Places.jsx';
 
-const places = localStorage.getItem();
-
 export default function AvailablePlaces({ onSelectPlace }) {
   // Todo: Fetch available places from backend API
   const [availablePlaces, setAvailablePlaces] = useState([]);
+
+  fetch('http://localhost:5173/places').then((response) => {
+    return response.json()
+  }).then((resData) => {
+    setAvailablePlaces(resData.places);
+  });
 
   return (
     <Places
