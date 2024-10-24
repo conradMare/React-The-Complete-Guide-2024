@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Places from './Places.jsx';
-import Error from './Error.jsx';
+import ErrorPage from './Error.jsx';
 import { sortPlacesByDistance } from '../loc.js';
 import { fetchAvailablePlaces } from '../http.js';
 
@@ -39,7 +39,7 @@ export default function AvailablePlaces({ onSelectPlace }) {
   }, []);
 
   if (error) {
-    return <Error title="An error occurred!" message={error.message} />;
+    return <ErrorPage title="An error occurred!" message={error.message} />;
   }
 
   return (
