@@ -6,7 +6,7 @@ import DeleteConfirmation from './components/DeleteConfirmation.jsx';
 import logoImg from './assets/logo.png';
 import AvailablePlaces from './components/AvailablePlaces.jsx';
 import { fetchUserPlaces, updateUserPlaces } from './http.js';
-import Error from './components/Error.jsx';
+import ErrorPage from './components/Error.jsx';
 import { useFetch } from './hooks/useFetch.js';
 
 function App() {
@@ -87,7 +87,7 @@ function App() {
     <>
       <Modal open={errorUpdatingPlaces} onClose={handleError}>
         {errorUpdatingPlaces && (
-          <Error
+          <ErrorPage
             title="An error occurred!"
             message={errorUpdatingPlaces.message}
             onConfirm={handleError}
@@ -111,7 +111,7 @@ function App() {
         </p>
       </header>
       <main>
-        {error && <Error title="An error occurred!" message={error.message} />}
+        {error && <ErrorPage title="An error occurred!" message={error.message} />}
         {!error && (
           <Places
             title="I'd like to visit ..."
