@@ -16,11 +16,15 @@
 
 // import Header from './components/Header.jsx';
 // import Signup from './components/Signup.jsx';
+// import Footer from './components/Footer.jsx';
 
 // function App() {
 //   return (
 //     <>
 //       <Header />
+//       <div className='footer'>
+//         <Footer />
+//       </div>
 //       <main>
 //         <Signup />
 //       </main>
