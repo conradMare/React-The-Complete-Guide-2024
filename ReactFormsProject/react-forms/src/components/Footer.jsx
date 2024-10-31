@@ -3,7 +3,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <h4>"The certain sign of wisdom is constant cheerfulness." - Michel de Montaigne</h4>
+            <h4>"The surest sign of wisdom is constant cheerfulness." - Michel de Montaigne</h4>
             <p>Created {year}</p>
         </footer>
     )
