@@ -32,6 +32,7 @@
 
 import Header from './components/Header.jsx';
 import Login from './components/StateLogin.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <main>
         <Login />
       </main>
+      <Footer />
     </>
   );
 }

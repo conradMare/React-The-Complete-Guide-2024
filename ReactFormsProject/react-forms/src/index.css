@@ -158,3 +158,8 @@ fieldset {
   background-color: transparent;
   color: #869999;
 }
+
+footer {
+  color: black;
+  text-align: center;
+}
