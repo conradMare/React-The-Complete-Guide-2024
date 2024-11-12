@@ -1,7 +1,7 @@
 import classes from './Counter.module.css';
 
 const Counter = () => {
-  const toggleCounterHandler = () => {};
+  const toggleCounterHandler = () => { };
 
   return (
     <main className={classes.counter}>
