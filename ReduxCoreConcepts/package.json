@@ -1,0 +1,16 @@
+{
+  "name": "reduxcoreconcepts",
+  "version": "1.0.0",
+  "main": "redux-demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.7",
+    "redux": "^5.0.1"
+  }
+}
