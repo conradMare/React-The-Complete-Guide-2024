@@ -31,6 +31,9 @@ const Counter = () => {
 
 export default Counter;
 
+// import {Component} from 'react';
+// import {useSelector, useDispatch} from 'react-redux';
+
 // class Counter extends Component {
 //   incrementHandler() {
 //     this.props.increment();
