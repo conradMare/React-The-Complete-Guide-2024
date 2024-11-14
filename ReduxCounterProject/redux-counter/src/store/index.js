@@ -37,3 +37,5 @@ const counterReducer = (state = initialState, action) => {
 const store = createStore(counterReducer);
 
 export default store;
+
+// NEVER MUTATE THE STATE, ALWAYS OVERRIDE IT -> Mutating it can cause unwanted errors and bugs!!!
