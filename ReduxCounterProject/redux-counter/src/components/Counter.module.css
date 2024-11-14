@@ -5,7 +5,7 @@
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  background-color: #f4f0fa;
+  background: linear-gradient(90deg, #f4f0fa, rgb(210, 115, 210));
 }
 
 .counter h1 {
