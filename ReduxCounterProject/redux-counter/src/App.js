@@ -16,6 +16,7 @@ function App() {
       {!isAuth && <Auth />}
       {isAuth && <UserProfile />}
       <Counter />
+      <UserProfile />
     </Fragment>
   );
 }
