@@ -40,6 +40,8 @@ const Counter = () => {
 
 export default Counter;
 
+// Using Redux with Class-based Components
+
 // import {Component} from 'react';
 // import {useSelector, useDispatch, connect} from 'react-redux';
 
