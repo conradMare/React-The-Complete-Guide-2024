@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #3f3f3f;
+  background: linear-gradient(270deg, white, rgb(85, 244, 255));
 }
 
 button {

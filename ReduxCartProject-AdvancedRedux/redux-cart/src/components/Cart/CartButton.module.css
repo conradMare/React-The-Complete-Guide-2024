@@ -1,7 +1,7 @@
 .button {
   background-color: transparent;
-  border-color: #1ad1b9;
-  color: #1ad1b9;
+  border-color: #00f7d6;
+  color: #00d1b5;
 }
 
 .button:hover,
@@ -14,8 +14,8 @@
 }
 
 .badge {
-  background-color: #1ad1b9;
+  background-color: #00ffdd;
   border-radius: 30px;
   padding: 0.15rem 1.25rem;
-  color: #1d1d1d;
+  color: #000000;
 }
