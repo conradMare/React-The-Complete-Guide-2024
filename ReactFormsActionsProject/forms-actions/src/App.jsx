@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <Header />
+      <hr style={{ width: "50%" }} />
       <main>
         <Signup />
       </main>
