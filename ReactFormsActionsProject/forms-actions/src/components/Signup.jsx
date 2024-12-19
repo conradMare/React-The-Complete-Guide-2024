@@ -82,7 +82,6 @@ export default function Signup() {
           type="email"
           name="email"
           defaultValue={formState.enteredValues?.email}
-
         />
       </div>
 
