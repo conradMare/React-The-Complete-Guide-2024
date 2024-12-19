@@ -133,7 +133,11 @@ export default function Signup() {
 
       <div className="control">
         <label htmlFor="phone">What best describes your role?</label>
-        <select id="role" name="role" defaultValue={formState.enteredValues?.role}>
+        <select
+          id="role"
+          name="role"
+          defaultValue={formState.enteredValues?.role}
+        >
           <option value="student">Student</option>
           <option value="teacher">Teacher</option>
           <option value="employee">Employee</option>
