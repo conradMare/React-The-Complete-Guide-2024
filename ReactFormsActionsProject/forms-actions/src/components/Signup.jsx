@@ -189,8 +189,8 @@ export default function Signup() {
             id="terms-and-conditions"
             name="terms"
             defaultChecked={formState.enteredValues?.terms}
-          />I
-          agree to the terms and conditions
+          />
+          I agree to the terms and conditions
         </label>
       </div>
 
