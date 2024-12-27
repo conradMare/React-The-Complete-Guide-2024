@@ -64,6 +64,7 @@ export function OpinionsContextProvider({ children }) {
     if (!response.ok) {
       return;
     }
+
     setOpinions((prevOpinions) => {
       return prevOpinions.map((opinion) => {
         if (opinion.id === id) {
