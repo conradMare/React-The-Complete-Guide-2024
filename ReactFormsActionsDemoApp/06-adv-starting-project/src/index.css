@@ -18,14 +18,14 @@ body {
 #main-header {
   text-align: center;
   background: linear-gradient(90deg, #2e2923, rgb(190, 190, 190));
-  color: #d2cdc6;
+  color: #ffffff;
   padding: 3rem;
 }
 
 h1 {
   font-size: 3rem;
   font-family: "Rubik", sans-serif;
-  color: #c17013;
+  color: #f7a446;
   margin: 0 0 1rem 0;
 }
 
