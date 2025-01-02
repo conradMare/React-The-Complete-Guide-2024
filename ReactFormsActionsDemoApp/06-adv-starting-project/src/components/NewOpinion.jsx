@@ -69,6 +69,7 @@ export function NewOpinion() {
             />
           </p>
         </div>
+
         <p className="control">
           <label htmlFor="body">Your Opinion</label>
           <textarea
