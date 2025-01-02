@@ -1,8 +1,8 @@
-import { useActionState, use } from "react";
+import { useActionState, use } from 'react';
 
-import { OpinionsContext } from "../store/opinions-context";
+import { OpinionsContext } from '../store/opinions-context';
 
-import Submit from "./Submit";
+import Submit from './Submit';
 
 export function NewOpinion() {
   const { addOpinion } = use(OpinionsContext);
