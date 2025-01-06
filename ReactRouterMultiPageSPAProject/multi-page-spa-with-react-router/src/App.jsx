@@ -1,6 +1,14 @@
+import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
+
+import HomePage from './pages/Home';
+
+const routerValue = createBrowserRouter([
+  { path: '/', element: <HomePage /> },
+])
+
 function App() {
   return (
-    <div></div>
+    <RouterProvider router={routerValue} />
   );
 }
 
