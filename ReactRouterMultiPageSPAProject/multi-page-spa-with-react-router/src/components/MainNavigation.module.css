@@ -13,11 +13,11 @@
 
 .list a {
   text-decoration: none;
-  color: var(--color-primary-400);
+  color: rgb(245, 161, 35);
 }
 
 .list a:hover,
 .list a.active {
-  color: var(--color-primary-800);
+  color: rgb(186, 82, 13);
   text-decoration: underline;
 }
