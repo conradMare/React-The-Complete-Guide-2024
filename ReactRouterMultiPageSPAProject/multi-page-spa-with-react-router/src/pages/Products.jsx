@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import classes from './Products.module.css';
+
 const PRODUCTS = [
     { id: 'p1', title: 'Product 1' },
     { id: 'p2', title: 'Product 2' },
@@ -13,7 +15,7 @@ function ProductsPage() {
             <ul>
                 {PRODUCTS.map((prod) => (
                     <li key={prod.id}>
-                        <Link to={prod.id}>{prod.title}</Link>
+                        <Link className={classes.link} to={prod.id}>{prod.title}</Link>
                     </li>
                 ))}
             </ul>
