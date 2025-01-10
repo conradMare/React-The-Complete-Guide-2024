@@ -9,7 +9,7 @@ function ErrorPage() {
                 <p>Could not find this page.</p>
             </main>
         </>
-    )
+    );
 }
 
 export default ErrorPage;
