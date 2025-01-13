@@ -2,11 +2,11 @@
 
 import { createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
 
-import EditEventPage from "./pages/EditEventPage";
-import EventDetailPage from "./pages/EventDetailPage";
-import EventsPage from "./pages/EventsPage";
+import EditEventPage from './pages/EditEventPage';
+import EventDetailPage from './pages/EventDetailPage';
+import EventsPage from './pages/EventsPage';
 import HomePage from './pages/HomePage';
-import NewEventPage from "./pages/NewEventPage";
+import NewEventPage from './pages/NewEventPage';
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
