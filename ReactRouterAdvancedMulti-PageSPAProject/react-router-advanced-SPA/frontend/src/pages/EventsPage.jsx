@@ -1,47 +1,35 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-const DUMMY_EVENTS = [
-    {
-        id: 'e1',
-        title: 'Some event',
-    },
-    {
-        id: 'e2',
-        title: 'Another event',
-    }
-];
-
-const DUMMY_EVENTS_PARAMS_TEST = [
-    {
-        id: 't1',
-        title: 'This is the first test',
-    },
-    {
-        id: 't2',
-        title: 'This is the second test',
-    }
-];
+import EventsList from '../components/EventsList';
 
 function EventsPage() {
+    const [isLoading, setIsLoading] = useState(false);
+    const [fetchedEvents, setFetchedEvents] = useState();
+    const [error, setError] = useState();
+
+    useEffect(() => {
+        async function fetchEvents() {
+            setIsLoading(true);
+            const response = await fetch('http://localhost:8080/events');
+
+            if (!response.ok) {
+                setError('Fetching events failed.');
+            } else {
+                const resData = await response.json();
+                setFetchedEvents(resData.events);
+            }
+            setIsLoading(false);
+        }
+
+        fetchEvents();
+    }, []);
     return (
         <>
-            <h1>Events Page</h1>
-            <ul>
-                {DUMMY_EVENTS.map((event) =>
-                    <li key={event.id}>
-                        <Link to={event.id}>{event.title}</Link>
-                    </li>
-                )}
-            </ul>
-            <hr />
-            <h1>Params Test</h1>
-            <ul>
-                {DUMMY_EVENTS_PARAMS_TEST.map((params) =>
-                    <li key={params.id}>
-                        <Link to={params.id}>{params.title}</Link>
-                    </li>
-                )}
-            </ul>
+            <div style={{ textAlign: 'center' }}>
+                {isLoading && <p>Loading...</p>}
+                {error && <p>{error}</p>}
+            </div>
+            {!isLoading && fetchedEvents && <EventsList events={fetchedEvents} />}
         </>
     );
 }
