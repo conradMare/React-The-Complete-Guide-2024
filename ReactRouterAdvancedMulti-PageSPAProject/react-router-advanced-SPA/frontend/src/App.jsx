@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import NewEventPage from './pages/NewEventPage';
 import RootLayout from './pages/Root';
 import EventsRoots from './pages/EventsRoots';
-import { loader as eventsLoader } from './pages/EventsLoader';
+import { loader as eventsLoader } from './util/EventsLoader';
 
 const routeValues = createBrowserRouter([
   {
