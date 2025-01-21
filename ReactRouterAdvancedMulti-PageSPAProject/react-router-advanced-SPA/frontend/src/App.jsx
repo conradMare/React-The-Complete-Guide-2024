@@ -2,11 +2,12 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import EditEventPage from './pages/EditEventPage';
 import EventDetailPage from './pages/EventDetailPage';
-import EventsPage, { loader as eventsLoader } from './pages/EventsPage';
+import EventsPage from './pages/EventsPage';
 import HomePage from './pages/HomePage';
 import NewEventPage from './pages/NewEventPage';
 import RootLayout from './pages/Root';
 import EventsRoots from './pages/EventsRoots';
+import { loader as eventsLoader } from './pages/EventsLoader';
 
 const routeValues = createBrowserRouter([
   {
