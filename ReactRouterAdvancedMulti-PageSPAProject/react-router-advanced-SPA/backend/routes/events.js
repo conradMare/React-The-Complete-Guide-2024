@@ -9,6 +9,19 @@ const {
 
 const router = express.Router();
 
+// Used as example of how React Router works
+
+// router.get('/', async (req, res, next) => {
+//   try {
+//     const events = await getAll();
+//     setTimeout(() => {
+//       res.json({ events: events });
+//     }, 1500)
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
 router.get('/', async (req, res, next) => {
   try {
     const events = await getAll();
