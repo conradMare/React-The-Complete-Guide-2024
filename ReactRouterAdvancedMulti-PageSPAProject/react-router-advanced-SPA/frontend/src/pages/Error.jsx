@@ -11,6 +11,9 @@ function ErrorPage() {
 
     if (error.status === 500) {
         message = JSON.parse(error.data).message;
+
+        // Using json utility function (In EventsLoader.jsx) -> not necessary to parse:
+        // message = error.data.message
     }
 
     if (error.status) {
